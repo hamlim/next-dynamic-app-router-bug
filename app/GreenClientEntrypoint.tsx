@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import "./styles-b.css";
 
 let Header = dynamic(() => import("./Header"));
 

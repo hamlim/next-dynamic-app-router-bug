@@ -1,6 +1,10 @@
 import ClientEntrypoint from "../client-entrypoint";
 
-export default async function EdgePage({ searchParams: { theme } }) {
+export default async function EdgePage({
+  searchParams: { theme },
+}: {
+  searchParams: { theme: "red" | "green" };
+}) {
   theme = theme || "green";
   // next/dynamic for style loading:
 
@@ -18,5 +22,9 @@ export default async function EdgePage({ searchParams: { theme } }) {
     }
   }
   // @ts-ignore
-  return <ClientEntrypoint theme={theme} />;
+  return (
+    <div className={`theme-${theme}`}>
+      <ClientEntrypoint theme={theme} />
+    </div>
+  );
 }

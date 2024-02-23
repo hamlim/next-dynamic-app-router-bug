@@ -18,7 +18,7 @@ import Image from "next/image";
 //   }),
 // };
 
-export default function Header({ theme }: { theme: "red" | "green" }) {
+export default function Header() {
   // let Styles = styles[theme];
   return (
     <>
